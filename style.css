@@ -1,0 +1,435 @@
+/* =========================
+   Google Font
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   Reset
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   Body
+========================= */
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#021B79,#0575E6);
+
+    padding:30px;
+
+}
+
+/* =========================
+   Container
+========================= */
+
+.container{
+
+    display:flex;
+
+    gap:30px;
+
+    align-items:flex-start;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+/* =========================
+   Calculator Card
+========================= */
+
+.calculator{
+
+    width:380px;
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+/* =========================
+   Header
+========================= */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.header h2{
+
+    color:#FFD700;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+#themeToggle{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FFD700;
+
+    color:#021B79;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+#themeToggle:hover{
+
+    transform:rotate(180deg);
+
+    box-shadow:0 0 15px #FFD700;
+
+}
+
+/* =========================
+   Display
+========================= */
+
+.display{
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:18px;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+}
+
+#expression{
+
+    color:#ddd;
+
+    text-align:right;
+
+    font-size:16px;
+
+    min-height:22px;
+
+}
+
+#display{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:white;
+
+    text-align:right;
+
+    font-size:36px;
+
+    font-weight:bold;
+
+}
+/* =========================
+   Buttons
+========================= */
+
+.buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+.buttons button{
+
+    height:65px;
+
+    border:none;
+
+    border-radius:18px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+    transition:.3s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.buttons button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 15px rgba(255,215,0,.6);
+
+}
+
+/* AC & DEL */
+
+.special{
+
+    background:#b71c1c !important;
+
+    color:white;
+
+}
+
+/* Operators */
+
+.operator{
+
+    background:#FFD700 !important;
+
+    color:#021B79 !important;
+
+}
+
+/* Equal Button */
+
+.equal{
+
+    background:#FFD700 !important;
+
+    color:#021B79 !important;
+
+    grid-column:span 2;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+/* Zero Button */
+
+.zero{
+
+    grid-column:span 2;
+
+}
+/* =========================
+   History Panel
+========================= */
+
+.history{
+
+    width:260px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:20px;
+
+    color:white;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.history h3{
+
+    color:#FFD700;
+
+    margin-bottom:15px;
+
+    text-align:center;
+
+    font-size:22px;
+
+}
+
+#historyList{
+
+    list-style:none;
+
+    max-height:400px;
+
+    overflow-y:auto;
+
+}
+
+#historyList li{
+
+    background:rgba(255,255,255,.08);
+
+    padding:10px;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+    font-size:15px;
+
+    word-break:break-word;
+
+}
+/* =========================
+   Footer
+========================= */
+
+.developer{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:#FFD700;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+}
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:900px){
+
+.container{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.history{
+
+    width:380px;
+
+}
+
+}
+
+@media(max-width:450px){
+
+.calculator,
+.history{
+
+    width:100%;
+
+}
+
+.header h2{
+
+    font-size:22px;
+
+}
+
+.buttons button{
+
+    height:58px;
+
+    font-size:20px;
+
+}
+
+#display{
+
+    font-size:30px;
+
+}
+
+}
+/* =========================
+   Light Mode
+========================= */
+
+.light-mode{
+
+    background:linear-gradient(135deg,#f5f7fa,#c3cfe2);
+
+}
+
+.light-mode .calculator,
+.light-mode .history{
+
+    background:rgba(255,255,255,.85);
+
+}
+
+.light-mode #display{
+
+    color:#021B79;
+
+}
+
+.light-mode #expression{
+
+    color:#555;
+
+}
+
+.light-mode .buttons button{
+
+    color:#021B79;
+
+}
+
+.light-mode .developer{
+
+    color:#021B79;
+
+}
